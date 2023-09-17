@@ -1,5 +1,5 @@
 import './Header.css'
-import keyConceptsImage from '../assets/images/key-concepts.png';
+import keyConceptsImage from '../../assets/images/key-concepts.png';
 
 const Header = (props) => {
   return (

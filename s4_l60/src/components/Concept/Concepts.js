@@ -1,5 +1,5 @@
 import ConceptItem from './ConceptItem'
-import Concept from '../UI/Concept'
+import Concept from '../../UI/Concept'
 
 const Concepts = (props) => {
 

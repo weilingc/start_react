@@ -1,10 +1,9 @@
-// import keyConceptsImage from './assets/images/key-concepts.png';
 import componentsImage from './assets/images/components.png';
 import stateImage from './assets/images/state.png';
 import eventsImage from './assets/images/events.png';
 
-import Concepts from './components/Concepts'
-import Header from './components/Header'
+import Concepts from './components/Concept/Concepts'
+import Header from './components/Header/Header'
 
 const concepts = [
   {
