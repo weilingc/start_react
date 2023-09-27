@@ -3,6 +3,7 @@ import styles from "./AddUser.module.css";
 import btn_styles from "../UI/Button.module.css";
 import ErrorModal from "../UI/ErrorModal";
 import Card from "../UI/Card";
+import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
   const [userName, setUserName] = useState("");
@@ -53,18 +54,23 @@ const AddUser = (props) => {
     setVaild(true);
   };
 
+  // const errorHandler = () => {
+  //   setError(null);
+  // };
+
   return (
-    <Card>
-      <form onSubmit={submitHandler}>
-        {/* {!isValid && <ErrorModal onOkay={clickOkayHandler}></ErrorModal>} */}
-        {error && (
-          <ErrorModal
-            title={error.title}
-            message={error.message}
-            onOkay={clickOkayHandler}
-          ></ErrorModal>
-        )}
-        <div className={styles.input}>
+    <Wrapper>
+      {error && (
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onOkay={clickOkayHandler}
+          // onConfirm={errorHandler}
+        ></ErrorModal>
+      )}
+      {/* {!isValid && <ErrorModal onOkay={clickOkayHandler}></ErrorModal>} */}
+      <Card className={styles.input}>
+        <form onSubmit={submitHandler}>
           <label>Username</label>
           <input
             type="text"
@@ -82,9 +88,9 @@ const AddUser = (props) => {
           <button type="submit" className={btn_styles.button}>
             Add User
           </button>
-        </div>
-      </form>
-    </Card>
+        </form>
+      </Card>
+    </Wrapper>
   );
 };
 

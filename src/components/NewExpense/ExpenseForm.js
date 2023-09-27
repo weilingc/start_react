@@ -30,12 +30,6 @@ const ExpenseForm = (props) => {
     setEnteredAmount("");
     setEnteredDate("");
   };
-  // const clickHandler = () => {
-  //   setformEnabled(1)
-  // }
-  // const clickCancelHandler = () => {
-  //   setformEnabled(0)
-  // }
 
   return (
     <form onSubmit={submitHandler}>
